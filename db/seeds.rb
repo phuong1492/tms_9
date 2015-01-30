@@ -9,26 +9,27 @@
 # Create 4 subject
 # Create Ruby on Rails subject
 rorSubject = Subject.create(name: "Ruby on Rails", 
-				instruction: "This is Ruby on Rails subject.", 
-				status: 0, 
-				created_at: Time.zone.now)
+	instruction: "This is Ruby on Rails subject.", 
+	status: 0, 
+	created_at: Time.zone.now)
+
 # Create Github subject
 gitSubject = Subject.create(name: "GitHub",
-				instruction: "This is Github subject.",
-				status: 0,
-				created_at: Time.zone.now)
+	instruction: "This is Github subject.",
+	status: 0,
+	created_at: Time.zone.now)
 
 # Create Mysql subject
 sqlSubject = Subject.create(name: "MySQL",
-				instruction: "This is MySQL subject.",
-				status: 0,
-				created_at: Time.zone.now)
+	instruction: "This is MySQL subject.",
+	status: 0,
+	created_at: Time.zone.now)
 
 # Create PHP subject
 phpSubject = Subject.create(name: "PHP",
-				instruction: "This PHP subject.",
-				status: 0,
-				created_at: Time.zone.now)
+	instruction: "This PHP subject.",
+	status: 0,
+	created_at: Time.zone.now)
 
 # Create tasks 
 # Create 10 tasks for Ruby on Rails subject
@@ -39,10 +40,10 @@ phpSubject = Subject.create(name: "PHP",
 	status = 0
 	created_at = Time.zone.now
 	Task.create(name: name, 
-				subject_id: subject_id, 
-				instruction: instruction,
-				status: status,
-				created_at: created_at)
+		subject_id: subject_id, 
+		instruction: instruction,
+		status: status,
+		created_at: created_at)
 end
 
 # Create 10 tasks for gitSubject
@@ -53,10 +54,10 @@ end
 	status = 0
 	created_at = Time.zone.now
 	Task.create(name: name, 
-				subject_id: subject_id, 
-				instruction: instruction,
-				status: status,
-				created_at: created_at)
+		subject_id: subject_id, 
+		instruction: instruction,
+		status: status,
+		created_at: created_at)
 end
 
 # Create 10 tasks for MySQL Subject
@@ -67,10 +68,10 @@ end
 	status = 0
 	created_at = Time.zone.now
 	Task.create(name: name, 
-				subject_id: subject_id, 
-				instruction: instruction,
-				status: status,
-				created_at: created_at)
+		subject_id: subject_id, 
+		instruction: instruction,
+		status: status,
+		created_at: created_at)
 end
 
 # Create 10 tasks for phpSubject
@@ -81,12 +82,11 @@ end
 	status = 0
 	created_at = Time.zone.now
 	Task.create(name: name, 
-				subject_id: subject_id, 
-				instruction: instruction,
-				status: status,
-				created_at: created_at)
+		subject_id: subject_id, 
+		instruction: instruction,
+		status: status,
+		created_at: created_at)
 end
-
 
 ###########################################################
 # Create 5 course samples
@@ -99,8 +99,8 @@ end
 	created_at = Time.zone.now
 	status = 0
 	Course.create(name: name,
-					status: status,
-					instruction: instruction,
-					created_at: created_at)
+		status: status,
+		instruction: instruction,
+		created_at: created_at)
 end
 

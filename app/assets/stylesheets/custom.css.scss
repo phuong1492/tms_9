@@ -191,8 +191,13 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  border-radius: 15px
 }
 
 .gravatar_edit {
   margin-top: 15px;
+}
+.edit-btn{
+  margin-top : 10px;
+  margin-left: 55px;
 }
