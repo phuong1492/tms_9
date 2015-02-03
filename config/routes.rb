@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     root 'users#index'
     #match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy
     get    'signup'   => 'users#new'
-    resources :users, only: [:new, :edit, :create, :index, :destroy, :update]
+    resources :users, only: [:show, :new, :edit, :create, :index, :destroy, :update]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
