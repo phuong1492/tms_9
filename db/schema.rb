@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128043549) do
+ActiveRecord::Schema.define(version: 20150128070703) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150128043549) do
     t.string   "remember_digest", limit: 255
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.boolean  "supervisor",      limit: 1
   end
 
 end
