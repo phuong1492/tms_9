@@ -6,6 +6,10 @@ class Admin::UsersController < ApplicationController
     @users = User.all
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   private
   def admin_user
     redirect_to root_url unless current_user.supervisor?
