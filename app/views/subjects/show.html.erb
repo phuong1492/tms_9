@@ -1,0 +1,15 @@
+<% provide(:title, "Subject information") %>
+<div class="row">
+  <div class="col-md-4">
+    <h3>Subject: <%= @subject.name %></h3>
+    <p>Created at: <%= @subject.created_at %></p>
+    <p>Updated at: <%= @subject.updated_at %></p>
+    <p><%= link_to "Edit", edit_subject_path(@subject) %></p>
+  </div>
+  <div class="col-md-8">
+    <h4>Tasks</h4>
+    <ul class="jumbotron">
+      <%= render "task" %>
+    </ul>
+  </div>
+</div>
