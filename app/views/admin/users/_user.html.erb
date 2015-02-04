@@ -1,0 +1,10 @@
+ <% if !user.supervisor? %>
+<li>
+  <%= gravatar_for user, size: 20 %>
+  <%= link_to user.name, user %>
+   <%= link_to "Detail", [:admin, user], class: "btn btn-primary" %>
+   <%= link_to "Edit", "#", class: "btn btn-primary" %>
+   <%= link_to "Destroy","#", data: { confirm: "You sure?" } , 
+   	method: :delete, class: "btn btn-primary" %>
+</li>
+<% end %>
