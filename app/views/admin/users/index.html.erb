@@ -1,0 +1,10 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+ <%= link_to "Add new Trainee", admin_signup_path, class: "edit-btn btn btn-primary" %>
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= render user %>
+    </li>
+  <% end %>
+</ul>
