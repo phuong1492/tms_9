@@ -5,7 +5,7 @@
       <h1>
         <%= gravatar_for @user, size:200 %>
         <% if admin_user? || current_user?(@user) %>
-          <%= link_to "Edit profile", "#", class: "edit-btn btn btn-primary" %>
+          <%= link_to "Edit profile", [:edit, :admin, @user], class: "edit-btn btn btn-primary" %>
         <% end %>
       </h1>
     </section>
