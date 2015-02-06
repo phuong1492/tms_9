@@ -1,10 +1,12 @@
-<% unless current_user?(user) %>
-  <li>
+<li>
+  <div class= "col-xs-6 col-md-8">
     <%= gravatar_for user, size: 20 %>
     <%= link_to user.name, [:admin, user] %>
+  </div>
+  <div class= "col-xs-6 col-md-4">
     <%= link_to "Detail", [:admin, user], class: "btn btn-primary" %>
     <%= link_to "Edit", [:edit, :admin, user], class: "btn btn-primary" %>
-    <%= link_to "Destroy", "#", data: { confirm: "You sure?" }, 
-   	  method: :delete, class: "btn btn-primary" %>
-  </li>
-<% end %>
+    <%= link_to "Destroy", [:admin, user], data: { confirm: "You sure?" }, 
+      method: :delete, class: "btn btn-primary" %>
+  </div>
+</li>
