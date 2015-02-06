@@ -3,7 +3,8 @@ class Admin::UsersController < ApplicationController
   before_action :admin_user
 
   def index
-    @users = User.all
+    @users = User.without_user(current_user).paginate page: params[:page], 
+      per_page: 5
   end
 
   def new
@@ -36,6 +37,13 @@ class Admin::UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    user = User.find params[:id]
+    user.destroy
+    flash[:success] = "User " + user.name + " has been deleted"
+    redirect_to admin_users_path
   end
 
   private
