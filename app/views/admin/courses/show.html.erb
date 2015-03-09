@@ -1,0 +1,11 @@
+<% provide(:title, @course.name) %>
+<div class="row">
+  <aside class = "col-md-4 col-md-offset-1">
+    <h1><%= @course.name %></h1>
+    <h2>Instruction: <%= @course.instruction %></h2>
+    <h2>Users</h2>
+		<% @course.users.each do |user| %>
+    <li><%= user.name %></li>
+    <% end %>
+  </aside>
+</div>

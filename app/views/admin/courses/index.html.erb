@@ -1,0 +1,15 @@
+<% provide(:title, 'All courses') %>
+<h1>All courses</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Created at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @courses %>
+    </tbody>
+  </table>
+</div>

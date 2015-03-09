@@ -1,0 +1,24 @@
+<% provide(:title, 'Create Courses') %>
+<h1>Create new course</h1>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for [:admin, @course] do |f| %>
+		<%= render 'shared/error_messages', object: f.object %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<%#= f.fields_for :user_course,User.all do |builder| %>
+		<%#= builder.check_box :id %>
+		<%#= render 'user_field', :f => builder %>
+		<% @users.each do |user| %>
+      <%= f.fields_for :user_courses, user do |builder| %>
+        <div><%= user.name %>
+        <div><%= builder.check_box :_destroy, 
+						{checked: nil}, false, true %></div></div>
+	      <%= builder.hidden_field :user_id, value: user.id %>
+        <%= builder.hidden_field :id, value: nil %>
+      <% end %>
+		<% end %>
+		<%= f.submit "Create new course", class: "btn btn-primary" %>
+		<% end %>
+  </div>
+</div>
